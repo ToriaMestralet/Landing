@@ -1,0 +1,1234 @@
+/********
+Paso 0: Definimos tipografías y propiedades básicas del documento
+
+********/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Black.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-SemiBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Light.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* definimos el tamaño de tipografía base y la familia tipográfica por defecto */
+html,
+body {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+/* la familia tipográfica por defecto para los títulos */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/********
+Paso 1: Definimos la estructura básica
+
+********/
+
+/* Cada sección de la landing */
+section {
+  background-color: #fff;
+  background-color: rgba(24, 185, 248, 0.068);
+  padding: 2rem 11rem;
+}
+
+section#portada {
+  height: 100vh;
+}
+
+footer {
+  padding: 7rem 4rem;
+  height: 45vh;
+  background-color: #2E2B2E;
+}
+
+/* defino el elemento que va a ir complementando el fondo de las secciones, 
+para despues poder posicionarlo correctamente dentro de cada una*/
+div.rejita {
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+  left: 0;
+}
+
+/********
+Paso 2: PORTADA
+
+********/
+
+section#portada {
+  background-image: url("../assets/img/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* tipografias */
+section#portada h1 {
+  margin-bottom: 2rem;
+}
+
+section#portada h1,
+h2 {
+  color: #fff;
+}
+
+/* divs */
+div.portada-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  width: 70vw;
+}
+
+div.portada-izquierda {
+  margin-top: 47vh;
+  margin-left: 3vw;
+}
+
+div.portada-derecha {
+  height: 66vh;
+  margin-left: 5vw;
+}
+
+/* cta */
+div.portada-derecha .portada-miniform {
+  margin-left: 9vw;
+  padding-top: 65vh;
+}
+
+div.portada-derecha .portada-miniform input[type="submit"] {
+  background-color: #18B9F8;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+}
+
+/********
+Paso 4: PRIMERA SECCION - IMAGEN + PRIMER PARRAFO
+
+********/
+
+
+section#seccion-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 15rem;
+  padding: 0;
+}
+
+/* tipografias*/
+section#seccion-1 h3 {
+  padding-bottom: 3rem;
+}
+
+/*reja fondo*/
+section#seccion-1 .rejita {
+  left: -5vw;
+  top: 80vh;
+}
+
+/* divs */
+div.seccion1-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+
+div.seccion1-izquierda {
+  margin-right: 6rem;
+}
+
+div.seccion1-derecha {
+  padding-top: 5rem;
+  height: 66vh;
+  margin: 0 5rem;
+  z-index: 20;
+}
+
+/********
+Paso 5: SEGUNDA SECCION - CARD VERTICAL
+
+********/
+
+section#seccion-2 {
+  align-items: center;
+}
+
+/*rejita fondo*/
+section#seccion-2 .rejita {
+  top: 150vh;
+  z-index: 15;
+}
+
+/*tipografias*/
+section#seccion-2 h3 {
+  color: #000;
+  margin-bottom: 6rem;
+  margin-left: 5rem;
+}
+
+section#seccion-2 .card-container .card-vertical p {
+  font-size: 1.8rem;
+}
+
+/*imagenes y elementos*/
+section#seccion-2 .card-container .card-vertical>* {
+  margin-bottom: 3rem;
+}
+
+section#seccion-2 .card-container .card-vertical img {
+  width: 70%;
+  padding-left: 8rem;
+  margin-bottom: 3rem;
+}
+
+/* divs */
+section#seccion-2 .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 85vw;
+  padding-bottom: 40rem;
+}
+
+section#seccion-2 .card-container .card-vertical {
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+  margin: 0 5rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  height: 50vh;
+  z-index: 20;
+  padding: 2rem;
+}
+
+section#seccion-2 .card-container .card-vertical .titulo {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/********
+Paso 6: REITERACION CTA
+
+********/
+
+section#reiteracion {
+  height: 20rem;
+  width: 100%;
+  background-color: #18b9f81c;
+  margin-bottom: 8.6rem;
+  z-index: 50;
+  position: absolute;
+  top: 190rem;
+
+}
+
+/*tipografias*/
+div.texto-izq p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+/*divs*/
+div.contenedor-reiteracion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+div.texto-izq {
+  width: 50rem;
+  margin-right: 16rem;
+  margin-left: 5rem;
+  margin-top: 4rem;
+}
+
+/*cta*/
+div.boton-der {
+  margin: 5.5rem 12rem;
+}
+
+div.contenedor-reiteracion .boton-der input[type="submit"] {
+  background-color: #18B9F8;
+  color: #000;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+/********
+Paso 7: TERCERA SECCION - FONDO AZUL
+
+********/
+
+section#seccion-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #18B9F8;
+  position: relative;
+  z-index: -5;
+}
+
+/*tipografias*/
+section#seccion-3 h3 {
+  color: #fff;
+  padding-top: 45vh;
+  margin-left: 5vw;
+  font-weight: 900;
+  position: absolute;
+  top: 8rem;
+  left: 18rem;
+}
+
+section#seccion-3 p {
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+
+section#seccion-3 h4 {
+  font-size: 2rem;
+}
+
+/* divs*/
+
+div.seccion3-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+
+div.seccion3-izquierda {
+  margin: 7rem 0;
+  margin-left: 3vw;
+
+}
+
+div.imagen-con-titulo {
+  display: flex;
+  width: 60rem;
+  height: 40rem;
+  justify-content: center;
+  z-index: 20;
+}
+
+div.seccion3-derecha {
+  margin-top: 3vh;
+  margin-left: 5vw;
+}
+
+/********
+Paso 8: CUARTA SECCION - CARD HORIZONTAL
+
+********/
+
+section#seccion-4 {
+  padding-bottom: 30vh;
+}
+
+/*tipografias*/
+section#seccion-4 h3 {
+  margin-left: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+section#seccion-4 h4 {
+  margin-bottom: 1.5vh;
+  margin-top: 2vh;
+}
+
+/*rejita fondo*/
+section#seccion-4 .rejita {
+  top: 337vh;
+}
+
+/*divs*/
+div.card-mob {
+  display: none;
+}
+
+section#seccion-4 .seccion4-container .card-horizontal {
+  margin: 6vh;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  height: 20vh;
+  width: 35vw;
+  overflow: inherit;
+  align-content: center;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+}
+
+div.ladoder {
+  margin: 3vh 2vw;
+  margin-left: 0;
+}
+
+div.card-desk {
+  display: flex;
+  flex-direction: row;
+}
+
+div.ladoizq {
+  width: 15vw;
+}
+
+/********
+Paso 9: FORM
+
+********/
+
+section#seccion-form {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+/* tipografia */
+section#seccion-form h3 {
+  font-weight: 900;
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+section#seccion-form h4 {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+section#seccion-form h5 {
+  margin-bottom: 1.5rem;
+}
+
+/* elementos especificos */
+div.contenedor-form .campos input {
+  margin-bottom: 5rem;
+  width: 25rem;
+  border-style: none none solid none;
+  border-color: rgb(0, 0, 0, 0.5);
+}
+
+div.imagen-form img {
+  width: 50vw;
+  overflow: hidden;
+}
+
+div.contenedor-form select {
+  width: 24rem;
+  border-style: none none solid none;
+  border-color: rgb(0, 0, 0, 0.5);
+}
+
+/* divs */
+div.drop {
+  margin-bottom: 5rem;
+}
+
+div.contenedor-form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div.campos {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+div.form-lado {
+  margin-bottom: 4rem;
+  margin-right: 0;
+  margin-left: 7rem;
+}
+
+/* cta */
+div.contenedor-form .miniform .portada-miniform input[type="submit"] {
+  background-color: #18B9F8;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  margin-left: 25rem;
+  margin-top: 5rem;
+  border-radius: 2px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/********
+Paso 10: FEEDBACK
+
+********/
+
+/* tipografias */
+div.check h6 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+div.atras h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #00000057;
+  padding-top: 1rem;
+}
+
+/*divs*/
+div.atras {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 445vh;
+  margin-left: 3rem;
+}
+
+div.check img {
+  width: 30%;
+}
+
+div.check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 5rem;
+}
+
+div.confirmacion {
+  margin-top: 6rem;
+}
+
+/***** FOOTER 
+
+*****/
+
+div.ftr {
+  width: 100;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  margin-top: 2rem;
+}
+
+div.contenedor-ftr {
+  padding: 0 1rem;
+  margin: 0 10rem;
+}
+
+div.logo-footer {
+  margin: 0 50rem;
+  margin-bottom: 2rem;
+}
+
+div.logo-footer img {
+  width: 12rem;
+}
+
+div.primera-linea {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 20rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 15rem;
+}
+
+div.segunda-linea {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 20rem;
+  padding-top: 3rem;
+  margin: 0 15rem;
+}
+
+div.segunda-linea h6 {
+  margin-left: 2rem;
+}
+
+footer h6 {
+  padding: 1rem;
+  color: #ffffff59;
+}
+
+/********
+Paso 10: Trabajamos para que sea responsive
+
+********/
+@media screen and (min-width: 501px) {
+  .mobile-only {
+    display: none;
+  }
+  
+/* oculto los elementos especificos del mobile*/
+  #img-mob {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .desktop-only {
+    display: none;
+  }
+
+/* oculto los elementos especificos de desktop*/
+  #img-web {
+    display: none;
+  }
+
+
+  /********
+    0: Tipografías y propiedades básicas del documento
+  ********/
+  html {
+    font-size: 7.5px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+  }
+
+  h6 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  /********
+  1: Estructura básica
+
+  ********/
+  section {
+    padding: 0;
+  }
+
+  section#portada {
+    height: 100vh;
+    width: 100vw;
+    background-position-x: 30;
+    padding: 0;
+  }
+
+  section.seccion-form {
+    min-height: 45vh;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 35vh;
+    padding: 7rem 2rem;
+  }
+
+
+  /********
+  3: PORTADA
+
+  ********/
+  /*tipografias*/
+  section#portada h1 {
+    margin-bottom: 3rem;
+  }
+
+  /*divs*/
+  div.portada-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  div.logo-container {
+    padding-left: 12rem;
+    padding-top: 4rem;
+  }
+
+  div.portada-izquierda {
+    margin-top: 35vh;
+    margin-left: 0;
+    width: 98%;
+  }
+
+  div.portada-derecha {
+    height: 20vh;
+  }
+
+  /*cta*/
+  div.portada-derecha .portada-miniform {
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+  }
+
+  div.portada-derecha .portada-miniform input[type="submit"] {
+    padding: 2rem 1rem;
+    font-size: 3rem;
+  }
+
+  /********
+  4: PRIMERA SECCION - IMAGEN + PRIMER PARRAFO
+
+  ********/
+
+  /*tipografias*/
+  section#seccion-1 h3 {
+    color: #fff;
+    margin-bottom: 5rem;
+    font-size: 2.7rem;
+    padding-left: 5rem;
+  }
+
+  section#seccion-1 p {
+    font-size: 2.4rem;
+  }
+
+  /*imagenes*/
+  section#seccion-1 .seccion1-container .seccion1-derecha img {
+    width: 100vw;
+  }
+
+  /*divs*/
+  section#seccion-1 {
+    margin: 12rem 2rem;
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  div.seccion1-container {
+    flex-direction: column;
+    flex-flow: row wrap-reverse;
+    width: 100%;
+  }
+
+  div.seccion1-izquierda {
+    margin: 0;
+    padding: 1rem;
+    z-index: 30;
+  }
+
+  div.seccion1-derecha {
+    height: 35vh;
+    z-index: 20;
+  }
+
+  /*rejita fondo*/
+  section#seccion-1 .rejita {
+    top: 93vh;
+    width: 55%;
+  }
+
+  /********
+  5: SEGUNDA SECCION - CARD VERTICAL
+
+  ********/
+
+  /*tipografias*/
+  section#seccion-2 h3 {
+    margin-left: 2rem;
+  }
+
+  section#seccion-2 .card-container .card-vertical p {
+    font-size: 2.1rem;
+  }
+
+  /*divs*/
+  section#seccion-2 .card-container {
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    width: 90vw;
+    height: 70rem;
+    margin-bottom: 43rem;
+    padding-bottom: 0rem;
+    margin-left: 2.2rem;
+  }
+
+  section#seccion-2 .card-container .card-vertical {
+    flex-direction: column;
+    border: none;
+    box-shadow: none;
+    margin: 5rem 0;
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#seccion-2 .card-container .card-vertical .titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*imagenes */
+  section#seccion-2 .card-container .card-vertical img {
+    width: 13%;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  section#seccion-2 .card-container .card-vertical>* {
+    margin-bottom: 1.5rem;
+  }
+
+  /*rejita fondo*/
+  section#seccion-2 .rejita {
+    top: 167vh;
+    z-index: -50;
+    width: 100%;
+  }
+
+  /******** 
+  REITERACION CTA 
+  
+  ********/
+
+  section#reiteracion {
+    height: 32rem;
+    margin-bottom: 7rem;
+    z-index: 50;
+    top: 260rem;
+  }
+
+  /*tiografias*/
+  div.texto-izq p {
+    font-size: 2.4rem;
+  }
+
+  /*divs*/
+  div.texto-izq {
+    margin: 4rem;
+  }
+
+  div.boton-der {
+    margin: 1rem 9.5rem;
+    margin-bottom: 5rem;
+  }
+
+  /*cta*/
+  div.boton-der input[type="submit"] {
+    padding: 2rem 1rem !important;
+    font-size: 3rem !important;
+  }
+
+  /*rejita fondo*/
+  section#reiteracion .rejita {
+    top: 262vh;
+    z-index: -50;
+    width: 35%;
+  }
+
+  /********
+  6: TERCERA SECCION - FONDO AZUL
+
+  ********/
+
+  /*tipografias*/
+  section#seccion-3 h3 {
+    font-size: 2.6rem;
+    padding-top: 30rem;
+    margin: 1rem;
+    top: 0;
+    left: 4rem;
+    margin-left: 0;
+  }
+
+  section#seccion-3 h4 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  section#seccion-3 p {
+    padding-bottom: 4rem;
+    font-size: 2.4rem;
+    width: 100%;
+    padding-right: 2rem;
+  }
+
+  /*divs*/
+  div.seccion3-container {
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 18rem;
+  }
+
+  div.imagen-con-titulo {
+    height: 8rem;
+    width: 43rem;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  div.seccion3-izquierda {
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+
+  div.seccion3-derecha {
+    margin-top: 12rem;
+    margin-bottom: 4rem;
+  }
+
+  /*rejita fondo*/
+  section#seccion-3 .rejita {
+    top: 35vh;
+    z-index: -5;
+    width: 100%;
+  }
+
+  /******
+7: CUARTA SECCION - CARD HORIZONTAL
+
+******/
+
+  /*tipografias*/
+  section#seccion-4 h3 {
+    margin-top: 8rem;
+  }
+
+  section#seccion-4 p {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  /*divs*/
+  div.card-desk {
+    display: none;
+  }
+
+  div.card-mob {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3rem 5rem;
+    text-align: center;
+  }
+
+  section#seccion-4 .seccion4-container .card-horizontal .contenido {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  section#seccion-4 {
+    padding-bottom: 6rem;
+  }
+
+
+  section#seccion-4 .seccion4-container .card-horizontal {
+    display: flex;
+    height: 43rem;
+    width: 80%;
+    margin: 5rem;
+    margin-bottom: 8rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  /*rejita fondo*/
+  section#seccion-4 .rejita {
+    top: 475vh;
+    left: -11vw;
+  }
+
+  /*imagenes*/
+  section#seccion-4 .rejita img {
+    width: 100%;
+  }
+
+  section#seccion-4 img {
+    width: 60%;
+    margin: 3rem 5rem;
+  }
+
+  /**** 
+  8: FORM
+
+  ****/
+
+  section#seccion-form {
+    flex-direction: column;
+    position: relative;
+  }
+
+  /*tipografia*/
+  section#seccion-form h3 {
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 10rem;
+  }
+
+  section#seccion-form h4 {
+    font-size: 2.7rem;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-top: 3rem;
+  }
+
+  section#seccion-form h5 {
+    font-size: 2.1rem;
+    margin-top: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  /*divs*/
+  div.imagen-form {
+    z-index: 50;
+
+  }
+
+  div.contenedor-form {
+    z-index: 100;
+    margin: 2.1rem;
+    width: 44rem;
+    position: absolute;
+    top: 8rem;
+  }
+
+  div .campos {
+    flex-direction: column;
+  }
+
+  div .caja {
+    background-color: rgb(255, 255, 255, 0.3);
+    padding-bottom: 3.4rem;
+
+  }
+
+  div.form-lado {
+    margin: 0;
+  }
+
+  div.drop {
+    margin: 0;
+  }
+
+  /*imagen y elementos*/
+  div.contenedor-form .campos input {
+    margin-bottom: 0;
+    width: 35rem;
+  }
+
+  div.contenedor-form select {
+    width: 35rem;
+  }
+
+  div.imagen-form img {
+    width: 100vw;
+  }
+
+  /*cta*/
+  div.contenedor-form .miniform .portada-miniform input[type="submit"] {
+    margin-left: 8rem;
+    margin-top: 6rem;
+    font-size: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  /******
+  9: FEEDBACK
+
+  ******/
+
+  /*tipogrfias*/
+
+  div.check h6 {
+    font-size: 2.1rem;
+    color: #fff;
+    margin-top: -5rem;
+  }
+
+  div.confirmacion h4 {
+    font-size: 2.4rem !important;
+    margin-top: -1rem !important;
+    padding-top: 0 !important;
+  }
+
+  div.atras h5 {
+    margin-bottom: 3rem !important;
+    margin-top: 2.1rem !important;
+    color: #ffffff5b;
+  }
+
+  /*imagen*/
+  div.check img {
+    width: 60%;
+    margin: 7rem 5rem;
+  }
+
+  /*divs*/
+  div.contenedor-feedback {
+    background-color: rgb(255, 255, 255, 0.3);
+    padding-bottom: 3.4rem;
+    height: 54rem;
+  }
+
+  div.confirmacion {
+    padding: 0 3rem;
+  }
+
+  div.atras {
+    margin-left: 13rem;
+    top: 69vh;
+  }
+
+  /******
+10: FOOTER 
+
+******/
+
+  div.contenedor-ftr {
+    margin: 0;
+  }
+
+  div.logo-footer {
+    margin: 0 15rem;
+    margin-bottom: 3rem;
+  }
+
+  div.primera-linea {
+    padding: 2rem 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  div.segunda-linea {
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+}
